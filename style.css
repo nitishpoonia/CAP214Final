@@ -1,28 +1,36 @@
-*{
+/* This section sets the margin and padding of the complete document to zero and sets the box-sizing to border box */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat',
-    sans-serif;
+        sans-serif;
 }
-header{
+/* This section is for changing the header color and aliging it to the center */
+header {
     background: #fec107;
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-header h1{
+/* This sets the font color of h1 present in header to white */
+header h1 {
     color: #ffffff;
 }
-
-#login{
+.header-img{
+    margin-right: 10px;
+    color: whitesmoke;
+}
+/* This section is contains the login form */
+#login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 83vh;
 }
-.login-form{
+/* This is customize the login form */
+.login-form {
     width: 400px;
     height: 300px;
     margin: auto;
@@ -31,15 +39,16 @@ header h1{
     flex-direction: column;
     justify-content: center;
 }
-.login-form input{
+/* This section sets the margin of input form present on login page to 10px */
+.login-form input {
     margin: 10px;
 }
-
-::placeholder{
+/* This pseduo tag is used here to change the font size of place holder in the input tag */
+::placeholder {
     font-size: 20px;
 }
-
-footer{
+/* This section customizes the footer of every page */
+footer {
     height: 7vh;
     position: relative;
     width: 100%;
@@ -48,76 +57,92 @@ footer{
     align-items: center;
     justify-content: center;
 }
-/* main page */
-#left-frame
-{
+
+/* ----------Main page which is after login page starts from here--------------- */
+
+
+/*This section is for the left iFrame present on the main page  */
+#left-frame {
     margin-top: 10px;
     height: 680px;
     width: 15%;
     background-color: #fec107;
 }
-#main-frame{
+/* This section is for the main frame present on the main page which is also the middle iFrame */
+#main-frame {
     height: 680px;
     width: 70%;
 }
-#right-frame{
+/* This section is for the right Frame present on the main page  */
+#right-frame {
     background-color: #fec107;
     width: 14.4%;
     height: 680px;
 }
-li a{
+
+/* This section customizes the list present in the left frame */
+li {
+    margin: 30px;
+    list-style-type: none;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+/* This section customizes the anchor tag present in the list items present in the left frame */
+li a {
     text-decoration: none;
     color: black;
     font-size: 18px;
     transition: all 0.3s ease-in;
 }
-li{
-    margin: 30px;
-    list-style-type: none;
-    padding: 10px;
-    border-radius: 10px;
+
+/* This section changes the color of anchor element when hovering over it */
+li a:hover {
+    color: #f5f5f5;
 }
-li a:hover{
-    color:#fec107;
-}
-ul li:last-child{
-    background-color: #fec107;
-}
-ul li a:last-child:hover{
-    color: whitesmoke;
-}
-h1{
+
+
+
+/* This changes text align to the center of the page */
+h1 {
     text-align: center;
 }
-.main>h1{
+/* This changes the text align to the center of the main page */
+.main>h1 {
     text-align: center;
 }
-.para{
+/* This is to customize the para graph element */
+.para {
     padding: 20px;
     color: white;
     font-size: 20px;
     letter-spacing: 1px;
     line-height: 30px;
 }
-.para-announce{
+
+.para-announce {
     text-align: center;
     background-color: #ffd658;
 }
-.announce-ul li{
+
+.announce-ul li {
     list-style-type: disc;
 }
-
-.img{
+/* This customizes all the images present in the web page */
+.img {
     width: 1200px;
     height: 700px;
     position: absolute;
     z-index: -1;
-    filter: blur(3px);
-    
+    filter: blur(5px);
+
 }
-/* Product Page */
+
+/*------------ Registration page--------------  */
+
+/* This is the main parent class which contains all elements of the registration page  */
 .wrapper {
-    
+
     max-width: 500px;
     width: 100%;
     background: #fff;
@@ -125,7 +150,7 @@ h1{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
     padding: 30px;
 }
-
+/* This customizes the title of the registration page */
 .wrapper .title {
     font-size: 24px;
     font-weight: 700;
@@ -134,24 +159,24 @@ h1{
     text-transform: uppercase;
     text-align: center;
 }
-
+/* This section sets the width of thea form element equal to the width of the wrapper class */
 .wrapper .form {
     width: 100%;
 }
-
+/* This section customizes the inputfield class which containts almost all of the elements on the login form as well as the registration form */
 .wrapper .form .inputfield {
     margin-bottom: 15px;
     display: flex;
     align-items: center;
 }
-
+/* This section customizes the label of the the form */
 .wrapper .form .inputfield label {
     width: 149px;
     color: #757575;
     margin-right: 5px;
     font-size: 14px;
 }
-
+/* This section customizes the input area of input  */
 .wrapper .form .inputfield .input,
 .wrapper .form .inputfield .textarea,
 .login-form input {
@@ -169,18 +194,17 @@ h1{
     height: 125px;
     resize: none;
 }
-
+/* This section customizes the drop down list which contains name of the states */
 .wrapper .form .inputfield .custom_select {
     position: relative;
     width: 100%;
     height: 37px;
 }
-#list_box option{
-    height: 24px;
+/* This changes the height of the list box which contains relationships */
+#list_box option {
+    height: 26px;
 }
-#list_box option:focus{
-    border: 1px solid #fec107;
-}
+
 
 .wrapper .form .inputfield .custom_select select {
     appearance: none;
@@ -194,13 +218,15 @@ h1{
     border-radius: 3px;
 }
 
-.gender{
+.gender {
     margin-right: 7px;
 }
+/* This changes the border color of the element which is in focus */
 .wrapper .form .inputfield .input:focus,
 .wrapper .form .inputfield .textarea:focus,
 .wrapper .form .inputfield .custom_select select:focus,
-.login-form input:focus {
+.login-form input:focus,
+#list_box:focus {
     border: 1px solid #fec107;
 }
 
@@ -208,7 +234,7 @@ h1{
     font-size: 14px;
     color: #757575;
 }
-
+/* This customizes the checkbox elements of the form */
 .wrapper .form .inputfield .check {
     width: 15px;
     height: 15px;
@@ -218,24 +244,9 @@ h1{
     margin-right: 10px;
 }
 
-.wrapper .form .inputfield .check input[type="checkbox"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-}
 
-.wrapper .form .inputfield .check .checkmark {
-    width: 15px;
-    height: 15px;
-    border: 1px solid #fec107;
-    display: block;
-    position: relative;
-}
-
-
-
-.wrapper .form .inputfield .btn, 
+/* This changes the color of the input element */
+.wrapper .form .inputfield .btn,
 button {
     width: 100%;
     padding: 8px 10px;
@@ -247,7 +258,7 @@ button {
     border-radius: 3px;
     outline: none;
 }
-
+/* This changes the color of the button when hoverd present on the form */
 .wrapper .form .inputfield .btn:hover,
 button:hover {
     background: #ffd658;
@@ -257,5 +268,7 @@ button:hover {
     margin-bottom: 0;
 }
 
-
-
+hr{
+    color: white;
+    margin-bottom: 10px;
+}
